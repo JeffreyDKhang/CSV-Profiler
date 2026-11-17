@@ -2,6 +2,42 @@
 
 Profile a CSV without changing its contents. The terminal version needs only Python; the optional visual version adds Streamlit.
 
+## Visual walkthrough
+
+This walkthrough profiles the local synthetic `messy_Leads_mock_salary.csv` fixture: 100 mock lead records across nine fields. The CSV itself stays outside the repository; the screenshots show the complete workflow without publishing input data.
+
+```mermaid
+flowchart LR
+    A[Upload CSV] --> B[Verify settings and preview]
+    B --> C[Choose quality checks]
+    C --> D[Run the profile]
+    D --> E[Explore results and export]
+```
+
+### 1. Upload and verify the file
+
+The app detects the encoding and separator, reports the record count, and previews the raw fields before analysis.
+
+![Upload the mock leads CSV and review its detected settings and preview](docs/screenshots/01-upload-preview.png)
+
+### 2. Choose the checks
+
+Select structure, completeness, uniqueness, and value-distribution checks. Here, the salary column is configured for all five statistical groups.
+
+![Configure salary distribution analysis groups](docs/screenshots/02-analysis-options.png)
+
+### 3. Review the data profile
+
+The results summarize file dimensions and show inferred types, mixed-type flags, distinct values, and cardinality for each column.
+
+![Review the completed data-structure profile](docs/screenshots/03-profile-results.png)
+
+### 4. Inspect the salary distribution
+
+The value-distribution tab reports summary statistics, outlier checks, and an exploratory histogram. The text report can then be downloaded from the browser.
+
+![Inspect the salary distribution histogram](docs/screenshots/04-salary-distribution.png)
+
 ## Visual interface (local browser)
 
 Requires Python 3.11 or later. Download/extract the project, then open a terminal in its folder.
