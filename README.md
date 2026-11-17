@@ -14,29 +14,49 @@ flowchart LR
     D --> E[Explore results and export]
 ```
 
-### 1. Upload and verify the file
+### 1. Choose the checks
 
-The app detects the encoding and separator, reports the record count, and previews the raw fields before analysis.
+After the CSV settings are verified, select any combination of Data Structure, Completeness, Uniqueness, and Value Distribution.
 
-![Upload the mock leads CSV and review its detected settings and preview](docs/screenshots/01-upload-preview.png)
+![Select all four CSV profiling sections](docs/screenshots/01-analysis-sections.png)
 
-### 2. Choose the checks
+### 2. Configure the salary analysis
 
-Select structure, completeness, uniqueness, and value-distribution checks. Here, the salary column is configured for all five statistical groups.
+For Value Distribution, the salary column is configured for all five statistical groups.
 
 ![Configure salary distribution analysis groups](docs/screenshots/02-analysis-options.png)
 
-### 3. Review the data profile
+### 3. Explore every result tab
+
+#### Data Structure
 
 The results summarize file dimensions and show inferred types, mixed-type flags, distinct values, and cardinality for each column.
 
-![Review the completed data-structure profile](docs/screenshots/03-profile-results.png)
+![Review the completed data-structure profile](docs/screenshots/03-data-structure-results.png)
 
-### 4. Inspect the salary distribution
+#### Completeness
 
-The value-distribution tab reports summary statistics, outlier checks, and an exploratory histogram. The text report can then be downloaded from the browser.
+Completeness separates blank cells from missing-value placeholders and reports the affected rows and columns.
 
-![Inspect the salary distribution histogram](docs/screenshots/04-salary-distribution.png)
+![Review missing and placeholder values in the completeness results](docs/screenshots/04-completeness-results.png)
+
+#### Uniqueness
+
+Uniqueness checks exact whole-row duplicates and shows whether optional identifier or composite-key checks were selected.
+
+![Review duplicate findings in the uniqueness results](docs/screenshots/05-uniqueness-results.png)
+
+#### Value Distribution
+
+The salary results include central tendency, quartiles, spread, skewness, tail weight, and outlier checks.
+
+![Review salary summary statistics in the value-distribution results](docs/screenshots/06-value-distribution-results.png)
+
+#### Distribution shape
+
+An exploratory histogram shows the number of observations in each salary range. The text report can then be downloaded from the browser.
+
+![Inspect the salary distribution histogram](docs/screenshots/07-salary-histogram.png)
 
 ## Visual interface (local browser)
 
