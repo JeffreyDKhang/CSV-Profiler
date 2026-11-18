@@ -14,19 +14,31 @@ flowchart LR
     D --> E[Explore results and export]
 ```
 
-### 1. Choose the checks
+### 1. Import the mock CSV
+
+Select the local `messy_Leads_mock_salary.csv` file. The app loads the 100-row synthetic fixture without modifying it.
+
+![Import the synthetic mock leads CSV](docs/screenshots/00-upload-mock-data.png)
+
+### 2. Review the inputs and preview
+
+Confirm the detected UTF-8 encoding and comma separator, choose **Yes — column labels**, and inspect the first ten records before continuing.
+
+![Review the detected CSV settings, header input, and data preview](docs/screenshots/01-review-input-settings.png)
+
+### 3. Choose the checks
 
 After the CSV settings are verified, select any combination of Data Structure, Completeness, Uniqueness, and Value Distribution.
 
 ![Select all four CSV profiling sections](docs/screenshots/01-analysis-sections.png)
 
-### 2. Configure the salary analysis
+### 4. Configure the salary analysis
 
 For Value Distribution, the salary column is configured for all five statistical groups.
 
 ![Configure salary distribution analysis groups](docs/screenshots/02-analysis-options.png)
 
-### 3. Explore every result tab
+### 5. Explore every result tab
 
 #### Data Structure
 
